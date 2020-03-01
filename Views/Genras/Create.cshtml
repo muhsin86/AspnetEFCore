@@ -4,37 +4,31 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="rightcolumn">
+    <h2 class="txt">ADD DIN FAVORITE CD</h2>
 
-<h1>Create</h1>
+    <form asp-action="Create">
+        <div asp-validation-summary="All"></div>
 
-<h4>Genra</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ArtistId" class="control-label"></label>
-                <select asp-for="ArtistId" class ="form-control" asp-items="ViewBag.ArtistId"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+        <div class="input-container">
+            <i class="icon"></i>
+            <select asp-for="ArtistId" class="input-field" asp-items="ViewBag.ArtistId">
+                <option value="0">Choose your favorite artist</option>
+            </select>
+        </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+        <div class="input-container">
+            <i class="icon"></i>
+            <input asp-for="Name" class="input-field" placeholder="CD NAME" />
+        </div>
+
+        <div class="input-container">
+            <textarea asp-for="Description" class="input-field" placeholder="DESCRIPTION"></textarea>
+        </div>
+
+        <input type="submit" value="ADD" class="btn" />
+        <br /><br /><br />
+        <a asp-action="Index" class="btn">Back to List</a>
+    </form>
 </div>
 

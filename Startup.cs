@@ -56,7 +56,7 @@ namespace labb3
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Genras}/{action=Index}/{id?}");
             });
         }
     }
