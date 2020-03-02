@@ -11,16 +11,16 @@
         <div class="card">
 
             <p>
-                ARTIST NAME:   @Model.Artist.Name
+                Artist Name:   @Model.Artist.Name
             </p>
 
 
             <p>
-                CD NAME: @Model.Name
+                Cd Name: @Model.Name
             </p>
 
             <p>
-                DESCRIPTION  @Html.Raw(Model.Description)
+                Description  @Html.Raw(Model.Description)
             </p>
 
             <a asp-action="Edit" asp-route-id="@Model.Id" class="bttn">Edit</a>    <a asp-action="Delete" asp-route-id="@Model.Id" class="bttn">Delete</a> <a asp-action="Index" class="bttn">Back to List</a>
